@@ -1,10 +1,15 @@
 require "prison/version"
 
 module Prison
-  # Your code goes here...
-    class Factory
-      def create
-        puts "creating a new jail..."
-      end
-    end
+	class Factory
+		def create
+			puts "create: dummy message."
+		end
+	end
+
+	class Guard
+		def list
+			jls = `jls -ds`
+			puts "#{jls}"
+		end
 end

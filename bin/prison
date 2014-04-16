@@ -1,14 +1,19 @@
 #!/usr/bin/env ruby
+require "prison"
 
-argv = ARGV
+argv = ARGV.dup
 
 if argv.include?("-v") || argv.include?("--version")
 	require "prison/version"
 	puts "Prison #{Prison::VERSION}"
 end
 
-if argv.include("create")
-  require "prison/factory"
+if argv.include?("create")
   factory = Prison::Factory.new
   factory.create
+end
+
+if argv.include?("list")
+  guard = Prison::Guard.new
+  guard.list
 end
