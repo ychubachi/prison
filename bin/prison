@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+
+argv = ARGV
+
+if argv.include?("-v") || argv.include?("--version")
+	require "prison/version"
+	puts "Prison #{Prison::VERSION}"
+end
+
+if argv.include("create")
+  require "prison/factory"
+  factory = Prison::Factory.new
+  factory.create
+end
