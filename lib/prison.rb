@@ -12,4 +12,6 @@ module Prison
 			jls = `jls -ds`
 			puts "#{jls}"
 		end
+	end
+
 end

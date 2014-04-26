@@ -12,6 +12,7 @@ Gem::Specification.new do |spec|
   spec.description   = %q{The easiest way to management FreeBSD jail.}
   spec.homepage      = "https://github.com/kzhd15med3gh/prison"
   spec.license       = "MIT"
+	spec.extensions    = %w[ext/prison/extconf.rb]
 
   spec.files         = `git ls-files -z`.split("\x0")
   # spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }

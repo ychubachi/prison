@@ -1,6 +1,6 @@
 # Prison
 
-TODO: Write a gem description
+FreeBSD jail wrapper.
 
 ## Installation
 
@@ -18,7 +18,11 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+prison list
+
+prison create
+
+prison config
 
 ## Contributing
 
