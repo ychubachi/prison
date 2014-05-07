@@ -1,8 +1,9 @@
 #include "prison.h"
 
 VALUE cPrison;
+struct iovec *iov;
 
-struct jail {
+struct r_jail {
 				VALUE	version;
 				VALUE	path;
 				VALUE	hostname;
@@ -15,6 +16,10 @@ struct jail {
 
 VALUE list_func(VALUE self){
 				puts ("Prison#list()");
+				u_int niov = 0;
+				int flags = 0;
+				int jg_res = jail_get(iov, niov, flags);
+				printf("%d\n", jg_res);
 				return self;
 }
 
